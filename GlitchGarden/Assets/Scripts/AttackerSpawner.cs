@@ -23,7 +23,7 @@ public class AttackerSpawner : MonoBehaviour
     private void SpawnAttacker()
     {
         var newEnemy = Instantiate(attackerPrefab, transform.position, Quaternion.identity);
-        Debug.Log(Time.timeSinceLevelLoad);
+        //Debug.Log(Time.timeSinceLevelLoad);
     }
 
     // Update is called once per frame
