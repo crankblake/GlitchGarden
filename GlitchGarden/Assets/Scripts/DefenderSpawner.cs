@@ -7,8 +7,7 @@ public class DefenderSpawner : MonoBehaviour
     [SerializeField] GameObject defender;
     private void OnMouseDown()
     {
-        Debug.Log("Mouse was clicked");
-        //SnapToGrid(GetSquareClicked());
+        //Debug.Log("Mouse was clicked");
         SpawnDefender(GetSquareClicked());
     }
     
