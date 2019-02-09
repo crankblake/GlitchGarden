@@ -19,6 +19,7 @@ public class DefenderButton : MonoBehaviour
         //SpriteRenderer renderer= gameObject.GetComponent<SpriteRenderer>();
         GetComponent<SpriteRenderer>().color = Color.white;
         //renderer.color = onColor;
+        FindObjectOfType<DefenderSpawner>().SetSelectedDefender(defenderPrefab);
     }
     /*
     private void OnMouseUp()
