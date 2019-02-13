@@ -5,15 +5,31 @@ using UnityEngine;
 public class DefenderSpawner : MonoBehaviour
 {
     Defender defender;
+    
     private void OnMouseDown()
     {
         //Debug.Log("Mouse was clicked");
-        SpawnDefender(GetSquareClicked());
+        AttemptToPlaceDefender(GetSquareClicked());
     }
     
     public void SetSelectedDefender(Defender defenderToSelect)
     {
         defender = defenderToSelect;
+    }
+
+    private void AttemptToPlaceDefender(Vector2 gridPos)
+    {
+        var StarDisplay = FindObjectOfType<StarsDisplay>();
+        int defenderCost = defender.GetStarCost();
+        //if we have enough stars 
+        //spawn the defender
+        //spend the stars
+        Debug.Log(StarDisplay.HaveEnoughStars(defenderCost));
+        if (StarDisplay.HaveEnoughStars(defenderCost))
+        {
+            SpawnDefender(gridPos);
+            StarDisplay.SpendStars(defenderCost);
+        }
     }
 
     private Vector2 GetSquareClicked()
