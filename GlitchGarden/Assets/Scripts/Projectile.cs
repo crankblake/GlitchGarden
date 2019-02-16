@@ -10,12 +10,12 @@ public class Projectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //transform.Rotate(0, 0, Time.deltaTime * 360, Space.Self);
         MoveProjectile();
     }
     private void MoveProjectile()
     {
       transform.Translate(Vector2.right * Time.deltaTime * projectileSpeed);
-      //transform.Rotate(0, 0, speedOfSpin * Time.deltaTime);
     }
     public int GetDamage()
     {
