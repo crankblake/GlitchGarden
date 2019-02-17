@@ -24,4 +24,8 @@ public class Health : MonoBehaviour
         GameObject explosion = Instantiate(deathVFX, transform.position, Quaternion.identity) as GameObject;
         Destroy(explosion, durationOfExplosion);
     }
+    public float GetHP()
+    {
+        return health;
+    }
 }
