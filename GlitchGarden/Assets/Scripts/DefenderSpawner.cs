@@ -24,7 +24,7 @@ public class DefenderSpawner : MonoBehaviour
         //if we have enough stars 
         //spawn the defender
         //spend the stars
-        Debug.Log(StarDisplay.HaveEnoughStars(defenderCost));
+        //Debug.Log(StarDisplay.HaveEnoughStars(defenderCost));
         if (StarDisplay.HaveEnoughStars(defenderCost))
         {
             SpawnDefender(gridPos);

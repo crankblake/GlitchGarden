@@ -20,7 +20,7 @@ public class Fox : MonoBehaviour
         }
         else if (otherObject.GetComponent<Defender>())
         {
-            Debug.Log("Trying to Attack with Fox: " + otherObject);
+            //Debug.Log("Trying to Attack with Fox: " + otherObject);
             GetComponent<Attacker>().Attack(otherObject);
         }
     }

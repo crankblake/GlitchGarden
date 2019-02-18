@@ -9,7 +9,7 @@ public class DefenderButton : MonoBehaviour
     [SerializeField] Defender defenderPrefab;
     private void OnMouseDown()
     {
-        Debug.Log("Mouse was clicked");
+        //Debug.Log("Mouse was clicked");
 
         var buttons = FindObjectsOfType<DefenderButton>();
         foreach(DefenderButton button in buttons)

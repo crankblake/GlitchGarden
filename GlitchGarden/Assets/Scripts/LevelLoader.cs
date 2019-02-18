@@ -21,6 +21,12 @@ public class LevelLoader : MonoBehaviour
         //SceneManager.LoadScene("StartScreen");
         LoadNextScene();
     }
+    public IEnumerator WaitForTimeLoss()
+    {
+        yield return new WaitForSeconds(delayInSeconds);
+        //SceneManager.LoadScene("StartScreen");
+        LoadYouLose();
+    }
     private void Start()
     {
         currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
@@ -28,5 +34,9 @@ public class LevelLoader : MonoBehaviour
         {
             StartCoroutine(WaitForTime());
         }
+    }
+    public void LoadYouLose()
+    {
+        SceneManager.LoadScene("LoseScreen");
     }
 }

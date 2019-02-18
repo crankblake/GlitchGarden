@@ -9,7 +9,7 @@ public class Lizard : MonoBehaviour
         GameObject otherObject = otherCollider.gameObject;
         if (otherObject.GetComponent<Defender>())
         {
-            Debug.Log(otherObject);
+            //Debug.Log(otherObject);
             GetComponent<Attacker>().Attack(otherObject);
         }
         
