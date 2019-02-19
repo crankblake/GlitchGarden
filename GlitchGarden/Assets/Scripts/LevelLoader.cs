@@ -5,8 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class LevelLoader : MonoBehaviour
 {
-    [SerializeField] int delayInSeconds = 3;
+    [SerializeField] int lossDelayInSeconds = 3;
+    [SerializeField] int winDelayInSeconds = 5;
+    //[SerializeField] AudioClip finishedLevelSFX;
+    //[SerializeField] [Range(0, 1)] float clipVolume = .5f;
     int currentSceneIndex;
+
     public void LoadNextScene()
     {
         SceneManager.LoadScene(currentSceneIndex + 1);
@@ -17,13 +21,13 @@ public class LevelLoader : MonoBehaviour
     }
     private IEnumerator WaitForTime()
     {
-        yield return new WaitForSeconds(delayInSeconds);
+        yield return new WaitForSeconds(lossDelayInSeconds);
         //SceneManager.LoadScene("StartScreen");
         LoadNextScene();
     }
     public IEnumerator WaitForTimeLoss()
     {
-        yield return new WaitForSeconds(delayInSeconds);
+        yield return new WaitForSeconds(lossDelayInSeconds);
         //SceneManager.LoadScene("StartScreen");
         LoadYouLose();
     }
@@ -39,4 +43,12 @@ public class LevelLoader : MonoBehaviour
     {
         SceneManager.LoadScene("LoseScreen");
     }
+    /*
+    public IEnumerator HandleWinCondition()
+    {
+        AudioSource.PlayClipAtPoint(finishedLevelSFX, Camera.main.transform.position, clipVolume);
+        yield return new WaitForSeconds(winDelayInSeconds);
+        Debug.Log("Load next scene plox");
+        LoadNextScene();
+    }*/
 }

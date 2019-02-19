@@ -1176,6 +1176,21 @@ PrefabInstance:
       propertyPath: winLabel
       value: 
       objectReference: {fileID: 9174349651551927918}
+    - target: {fileID: 4638354995938639098, guid: 8c4572eefa922ab4a9ec7ae901e29a29,
+        type: 3}
+      propertyPath: finishedLevelSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 18b087ad218c9c040929b0661ce8e662, type: 3}
+    - target: {fileID: 4638354995938639098, guid: 8c4572eefa922ab4a9ec7ae901e29a29,
+        type: 3}
+      propertyPath: clipVolume
+      value: 0.415
+      objectReference: {fileID: 0}
+    - target: {fileID: 4638354995938639098, guid: 8c4572eefa922ab4a9ec7ae901e29a29,
+        type: 3}
+      propertyPath: winDelayInSeconds
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c4572eefa922ab4a9ec7ae901e29a29, type: 3}
 --- !u!1001 &7109107275999955931
