@@ -31,7 +31,8 @@ public class HealthDisplay : MonoBehaviour
         }
         if (playerHealth <= 0)
         {
-            FindObjectOfType<LevelLoader>().StartCoroutine("WaitForTimeLoss");
+            //FindObjectOfType<LevelController>().StartCoroutine("HandleLoseCondition");
+            FindObjectOfType<LevelController>().PlayerHealthIsZero();
         }
     }
     public float GetPlayerHealth()

@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Gravestone
+  - Block
   layers:
   - Default
   - TransparentFX

@@ -43,6 +43,14 @@ public class LevelLoader : MonoBehaviour
     {
         SceneManager.LoadScene("LoseScreen");
     }
+    public void RestartLevel()
+    {
+        SceneManager.LoadScene(currentSceneIndex);
+    }
+    public void StartScreen()
+    {
+        SceneManager.LoadScene("StartScreen");
+    }
     /*
     public IEnumerator HandleWinCondition()
     {
