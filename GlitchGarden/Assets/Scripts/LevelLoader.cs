@@ -25,12 +25,6 @@ public class LevelLoader : MonoBehaviour
         //SceneManager.LoadScene("StartScreen");
         LoadNextScene();
     }
-    public IEnumerator WaitForTimeLoss()
-    {
-        yield return new WaitForSeconds(lossDelayInSeconds);
-        //SceneManager.LoadScene("StartScreen");
-        LoadYouLose();
-    }
     private void Start()
     {
         currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
@@ -39,16 +33,14 @@ public class LevelLoader : MonoBehaviour
             StartCoroutine(WaitForTime());
         }
     }
-    public void LoadYouLose()
-    {
-        SceneManager.LoadScene("LoseScreen");
-    }
     public void RestartLevel()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(currentSceneIndex);
     }
     public void StartScreen()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene("StartScreen");
     }
     /*

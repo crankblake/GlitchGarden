@@ -11,17 +11,25 @@ public class LevelController : MonoBehaviour
     [SerializeField] GameObject loseLabel;
     [SerializeField] int waitToLoadWin = 5;
     [SerializeField] int waitToLoadLose = 3;
-    [Range(0.1f, 10f)] [SerializeField] float gameSpeed = 1f;
+    //[Range(0.1f, 10f)] [SerializeField] float gameSpeed = 1f;
     bool alreadyEnding = false;
 
     private void Start()
     {
-        winLabel.SetActive(false);
-        loseLabel.SetActive(false);
+        if (winLabel != null)
+        {
+            winLabel.SetActive(false);
+        }
+        if (loseLabel != null)
+        {
+            loseLabel.SetActive(false);
+        }
+
+        /*
         if (gameObject.tag == "Block")
         {
             GetComponent<Collider2D>().enabled = false;
-        }
+        }*/
     }
     public void AttackerSpawned()
     {
@@ -43,10 +51,11 @@ public class LevelController : MonoBehaviour
     {
         //FindObjectOfType<DefenderSpawner>().gameObject.SetActive(false);
         //var buttons = FindObjectsOfType<DefenderButton>();
+        /*
         if (gameObject.tag == "Block")
         {
             GetComponent<Collider2D>().enabled = true;
-        }
+        }*/
         /*foreach (DefenderButton button in buttons)
         {
             button.gameObject.SetActive(false);
@@ -67,7 +76,8 @@ public class LevelController : MonoBehaviour
         //GetComponent<AudioSource>().Play();
        yield return new WaitForSeconds(waitToLoadLose);
         loseLabel.SetActive(true);
-        gameSpeed = 0f;
+        Time.timeScale = 0;
+        //gameSpeed = 0f;
         //FindObjectOfType<LevelLoader>().LoadNextScene();
     }
     // Update is called once per frame
@@ -88,7 +98,7 @@ public class LevelController : MonoBehaviour
 
     void Update()
     {
-        Time.timeScale = gameSpeed;
+        //Time.timeScale = gameSpeed;
         //Debug.Log(FindObjectsOfType<Attacker>().Length);
         /*Here's how I did the challenge
         if (FindObjectOfType<GameTimer>().GetTimerFinished())

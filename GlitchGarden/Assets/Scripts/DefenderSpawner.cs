@@ -19,16 +19,21 @@ public class DefenderSpawner : MonoBehaviour
 
     private void AttemptToPlaceDefender(Vector2 gridPos)
     {
+        
         var StarDisplay = FindObjectOfType<StarsDisplay>();
-        int defenderCost = defender.GetStarCost();
-        //if we have enough stars 
-        //spawn the defender
-        //spend the stars
-        //Debug.Log(StarDisplay.HaveEnoughStars(defenderCost));
-        if (StarDisplay.HaveEnoughStars(defenderCost))
+        if (defender != null)
         {
-            SpawnDefender(gridPos);
-            StarDisplay.SpendStars(defenderCost);
+            int defenderCost = defender.GetStarCost();
+
+            //if we have enough stars 
+            //spawn the defender
+            //spend the stars
+            //Debug.Log(StarDisplay.HaveEnoughStars(defenderCost));
+            if (StarDisplay.HaveEnoughStars(defenderCost))
+            {
+                SpawnDefender(gridPos);
+                StarDisplay.SpendStars(defenderCost);
+            }
         }
     }
 
