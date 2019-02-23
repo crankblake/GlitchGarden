@@ -22,8 +22,8 @@ public class LevelLoader : MonoBehaviour
     private IEnumerator WaitForTime()
     {
         yield return new WaitForSeconds(lossDelayInSeconds);
-        //SceneManager.LoadScene("StartScreen");
-        LoadNextScene();
+        SceneManager.LoadScene("StartScreen");
+        //LoadNextScene();
     }
     private void Start()
     {
