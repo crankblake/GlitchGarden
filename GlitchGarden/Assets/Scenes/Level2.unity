@@ -968,6 +968,18 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1607875817, guid: 5e82cfec522e63b45a0808772f679895, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1078
+      objectReference: {fileID: 0}
+    - target: {fileID: 1832949328, guid: 5e82cfec522e63b45a0808772f679895, type: 3}
+      propertyPath: damageHealth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1832949328, guid: 5e82cfec522e63b45a0808772f679895, type: 3}
+      propertyPath: baseHealth
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e82cfec522e63b45a0808772f679895, type: 3}
 --- !u!1001 &1051190222991983585
@@ -1244,6 +1256,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelController
       objectReference: {fileID: 0}
+    - target: {fileID: 4638354995938639098, guid: 8c4572eefa922ab4a9ec7ae901e29a29,
+        type: 3}
+      propertyPath: finishedLevelSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 18b087ad218c9c040929b0661ce8e662, type: 3}
+    - target: {fileID: 4638354995938639098, guid: 8c4572eefa922ab4a9ec7ae901e29a29,
+        type: 3}
+      propertyPath: clipVolume
+      value: 0.415
+      objectReference: {fileID: 0}
+    - target: {fileID: 4638354995938639098, guid: 8c4572eefa922ab4a9ec7ae901e29a29,
+        type: 3}
+      propertyPath: winDelayInSeconds
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4638354995938639098, guid: 8c4572eefa922ab4a9ec7ae901e29a29,
+        type: 3}
+      propertyPath: lossDelayInSeconds
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4638354995938639099, guid: 8c4572eefa922ab4a9ec7ae901e29a29,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1309,26 +1341,6 @@ PrefabInstance:
       propertyPath: loseLabel
       value: 
       objectReference: {fileID: 458211678}
-    - target: {fileID: 4638354995938639098, guid: 8c4572eefa922ab4a9ec7ae901e29a29,
-        type: 3}
-      propertyPath: finishedLevelSFX
-      value: 
-      objectReference: {fileID: 8300000, guid: 18b087ad218c9c040929b0661ce8e662, type: 3}
-    - target: {fileID: 4638354995938639098, guid: 8c4572eefa922ab4a9ec7ae901e29a29,
-        type: 3}
-      propertyPath: clipVolume
-      value: 0.415
-      objectReference: {fileID: 0}
-    - target: {fileID: 4638354995938639098, guid: 8c4572eefa922ab4a9ec7ae901e29a29,
-        type: 3}
-      propertyPath: winDelayInSeconds
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4638354995938639098, guid: 8c4572eefa922ab4a9ec7ae901e29a29,
-        type: 3}
-      propertyPath: lossDelayInSeconds
-      value: 10
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c4572eefa922ab4a9ec7ae901e29a29, type: 3}
 --- !u!1001 &7109107275999955931
