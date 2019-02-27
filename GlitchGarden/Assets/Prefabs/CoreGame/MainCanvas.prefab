@@ -1029,4 +1029,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74c1fa308d9569548aa2731b84905129, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stars: 1000
+  stars: 100

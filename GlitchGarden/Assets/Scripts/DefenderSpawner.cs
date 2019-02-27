@@ -1,11 +1,28 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class DefenderSpawner : MonoBehaviour
 {
     Defender defender;
-    
+    GameObject defenderParent;
+    const string DEFENDER_PARENT_NAME = "Defenders";
+
+    private void Start()
+    {
+        CreateDefenderParent();
+    }
+
+    private void CreateDefenderParent()
+    {
+        defenderParent = GameObject.Find(DEFENDER_PARENT_NAME);
+        if (!defenderParent)
+        {
+            defenderParent = new GameObject(DEFENDER_PARENT_NAME);
+        }
+    }
+
     private void OnMouseDown()
     {
         //Debug.Log("Mouse was clicked");
@@ -56,6 +73,7 @@ public class DefenderSpawner : MonoBehaviour
     private void SpawnDefender(Vector2 roundedPause)
     {
         Defender newDefender = Instantiate(defender, roundedPause, Quaternion.identity) as Defender;
+        newDefender.transform.parent = defenderParent.transform;
         //Debug.Log(Time.timeSinceLevelLoad);
     }
 }
